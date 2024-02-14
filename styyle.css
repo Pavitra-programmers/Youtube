@@ -130,3 +130,117 @@
     color: #222222;
     transition: 0.1 ease-in-out;
 }
+
+/**thumnails**/
+.thumbnails{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 200px;
+    min-width: 300px;
+}
+
+.tb{
+    top: 112px;
+    height: 250px;
+    width: 300px;
+}
+
+.tb1{
+    background-image: url("thumbnail1.png");
+    background-size: cover;
+    min-width: 280px;
+    min-height: 140px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+.tb2{
+    background-image: url("thumbnail2.png");
+    background-size: cover;
+    min-width: 280px;
+    min-height: 140px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+.tb3{
+    background-image: url("thumbnail3.png");
+    background-size: cover;
+    min-width: 280px;
+    min-height: 140px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+.tb4{
+    background-image: url("thumbnail4.png");
+    background-size: cover;
+    min-width: 280px;
+    min-height: 140px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+.tb5{
+    background-image: url("thumbnail5\ .png");
+    background-size: cover;
+    min-width: 280px;
+    min-height: 140px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+.tb6{
+    background-image: url("thumbnail6\ .png");
+    background-size: cover;
+    min-width: 280px;
+    min-height: 140px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+.tb7{
+    background-image: url("thumbnail7\ .png");
+    background-size: cover;
+    min-width: 280px;
+    min-height: 140px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+.tb8{
+    background-image: url("thumbnail8.png");
+    background-size: cover;
+    min-width: 280px;
+    min-height: 140px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+.tb9{
+    background-image: url("thumbnail9.png");
+    background-size: cover;
+    min-width: 280px;
+    min-height: 140px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+.tb10{
+    background-image: url("thumbnail10.png");
+    background-size: cover;
+    min-width: 280px;
+    min-height: 140px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+@media(max-width: 400px){
+    .tb{
+        min-width: 360px;
+        min-height: 280px;
+    }
+}
