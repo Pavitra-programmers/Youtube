@@ -135,7 +135,7 @@
 .thumbnails{
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     flex-wrap: wrap;
     width: 100%;
     min-height: 200px;
@@ -238,9 +238,32 @@
     margin-right: 8px;
     border-radius: 8px;
 }
+.tb11{
+    background-image: url("thumbnail11.png");
+    background-size: cover;
+    min-width: 280px;
+    min-height: 140px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+.tb12{
+    background-image: url("thumnail12.png");
+    background-size: cover;
+    min-width: 280px;
+    min-height: 140px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+}
 @media(max-width: 400px){
     .tb{
         min-width: 360px;
         min-height: 280px;
     }
+}
+
+.chn{
+    min-height: 110px;
+    width: 60px;
 }
