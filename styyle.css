@@ -6,6 +6,9 @@
  
  /**navbar**/
 .navbar{
+    top: 0px;
+    position: fixed;
+    width: 100%;
     height: 56px;
     display: flex;
     align-items: center;
@@ -88,23 +91,70 @@
     align-items: center;
     justify-content: space-evenly;
 }
+/*side bar*/
+.side-bar{
+    position: fixed;
+    top: 56px;
+    left: 0;
+    min-width: 200px;
+    
+    height: calc(100vh - 60px);
+    background-color: #121212;
+    padding-right: 10px;
+    overflow: hidden;
+}
+.links{
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+.links img{
+    height: 25px;
+    margin-right: 20px;
+}
+
+.links:hover,
+.links:active{
+    background-color: #5a5858;
+    transition: 0.3s ease-in;
+}
+
+.seperator{
+    border: none;
+    border-bottom: 1px solid #5a5858;
+    margin: 20px 0;
+}
 /*Content bar*/
-.content{
+.filter{
+    top: 56px;
+    left: 200px;
     height: 56px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
 }
+
 .list{  
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: calc(100% - -250px);
+}
+.list::-webkit-scrollbar{
+    display: none;
 }
 .box{
     font: Arial;
     font-size: .8rem;
-    line-height: 2rem;
+    margin-left: 10px;
     height: 32px;
     border-radius: 8px;
     background-color: #222222;
@@ -113,8 +163,8 @@
     padding-right: 10px;
     color: #f1f1f1;
     display: flex;
+    flex: 0 0 auto;
     align-items: center;
-    justify-content: center;
     font-weight: 500;
     text-decoration: none;
 }
@@ -130,222 +180,55 @@
 }
 
 /**thumnails**/
-.thumbnails{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+.video-container{
+    position: absolute;
     width: 100%;
-    min-height: 200px;
-    min-width: 300px;
+    margin-top: 120px;
+    margin-left: 200px;
+    padding-left: px;
+    display: grid;
+    grid-template-columns: repeat(4, 22%); 
+    overflow-x: hidden;
 }
 
-.tb{
-    top: 112px;
-    height: 250px;
+.video{
+    min-height: 250px;
+    width: 380px;
+    height: auto;
+    padding-left: 10px;
+}
+
+.thumbnail{
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.content{
+    width: 380px;
+    height: 100px;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.channel-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.title{
     width: 300px;
+    height: 36px;
+    padding-right: 20px;
+    overflow: hidden ;
 }
 
-.tb1{
-    background-image: url("tb/thumbnail1.png");
-    background-size: cover;
-    min-width: 280px;
-    min-height: 140px;
-    margin-left: 8px;
-    margin-right: 8px;
-    border-radius: 8px;
-}
-.tb2{
-    background-image: url("tb/thumbnail2.png");
-    background-size: cover;
-    min-width: 280px;
-    min-height: 140px;
-    margin-left: 8px;
-    margin-right: 8px;
-    border-radius: 8px;
-}
-.tb3{
-    background-image: url("tb/thumbnail3.png");
-    background-size: cover;
-    min-width: 280px;
-    min-height: 140px;
-    margin-left: 8px;
-    margin-right: 8px;
-    border-radius: 8px;
-}
-.tb4{
-    background-image: url("tb/thumbnail4.png");
-    background-size: cover;
-    min-width: 280px;
-    min-height: 140px;
-    margin-left: 8px;
-    margin-right: 8px;
-    border-radius: 8px;
-}
-.tb5{
-    background-image: url("tb/thumbnail5\ .png");
-    background-size: cover;
-    min-width: 280px;
-    min-height: 140px;
-    margin-left: 8px;
-    margin-right: 8px;
-    border-radius: 8px;
-}
-.tb6{
-    background-image: url("tb/thumbnail6\ .png");
-    background-size: cover;
-    min-width: 280px;
-    min-height: 140px;
-    margin-left: 8px;
-    margin-right: 8px;
-    border-radius: 8px;
-}
-.tb7{
-    background-image: url("tb/thumbnail7\ .png");
-    background-size: cover;
-    min-width: 280px;
-    min-height: 140px;
-    margin-left: 8px;
-    margin-right: 8px;
-    border-radius: 8px;
-}
-.tb8{
-    background-image: url("tb/thumbnail8.png");
-    background-size: cover;
-    min-width: 280px;
-    min-height: 140px;
-    margin-left: 8px;
-    margin-right: 8px;
-    border-radius: 8px;
-}
-.tb9{
-    background-image: url("tb/thumbnail9.png");
-    background-size: cover;
-    min-width: 280px;
-    min-height: 140px;
-    margin-left: 8px;
-    margin-right: 8px;
-    border-radius: 8px;
-}
-.tb10{
-    background-image: url("tb/thumbnail10.png");
-    background-size: cover;
-    min-width: 280px;
-    min-height: 140px;
-    margin-left: 8px;
-    margin-right: 8px;
-    border-radius: 8px;
-}
-.tb11{
-    background-image: url("tb/thumbnail11.png");
-    background-size: cover;
-    min-width: 280px;
-    min-height: 140px;
-    margin-left: 8px;
-    margin-right: 8px;
-    border-radius: 8px;
-}
-.tb12{
-    background-image: url("tb/thumnail12.png");
-    background-size: cover;
-    min-width: 280px;
-    min-height: 140px;
-    margin-left: 8px;
-    margin-right: 8px;
-    border-radius: 8px;
-}
-@media(max-width: 400px){
-    .tb{
-        min-width: 360px;
-        min-height: 280px;
-    }
-}
-
-.chn{
-    min-height: 110px;
-    width: 60px;
-}
-
-/** Shorts**/
-.shorts{
-    max-height: 500px;
-    width: 100%;
-    margin-top: 20px;
-    border-top: 1px solid #5a5858;
-    border-bottom: 1px solid #5a5858;
-}
-.label{
-    margin-top: 24px;
-    height: 24px;
-    width: 100%;
-    display: flex;
-    align-items:  center;
-}
-.stlogo{
-    height: 26px;
-    width: 96px;
-    background-image: url(shorts\ logo.png);
-    background-size: cover;
-    z-index: 1;
-}
-.shortstb{
-    height: 460px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.stbox{
-    height: 450px;
-    width: 230px;
-    padding-top: 20px;
-}
-.stb1{
-    height: 380px;
-    width: 210px;
-    background-image: url(stb/stb1.png);
-    background-size: cover;
-    border-radius: 8px;
-}
-.stb2{
-    height: 380px;
-    width: 210px;
-    background-image: url(stb/stb2.png);
-    background-size: cover;
-    border-radius: 8px;
-}
-.stb3{
-    height: 380px;
-    width: 210px;
-    background-image: url(stb/stb3.png);
-    background-size: cover;
-    border-radius: 8px;
-}
-.stb4{
-    height: 380px;
-    width: 210px;
-    background-image: url(stb/stb4.png);
-    background-size: cover;
-    border-radius: 8px;
-}
-.stb5{
-    height: 380px;
-    width: 210px;
-    background-image: url(stb/stb5.png);
-    background-size: cover;
-    border-radius: 8px;
-}
-.stb6{
-    height: 380px;
-    width: 210px;
-    background-image: url(stb/stb6.png);
-    background-size: cover;
-    border-radius: 8px;
-}
-.stb7{
-    height: 380px;
-    width: 210px;
-    background-image: url(stb/stb7.png);
-    background-size: cover;
-    border-radius: 8px;
+.channel-name{
+    font-size: 14px;
+    margin: 2px 0;
+    color: #979797;
 }
