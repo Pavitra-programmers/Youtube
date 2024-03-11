@@ -1,10 +1,10 @@
 const videoCardContainer = document.querySelector('.video-container');
 
-let api_key = Your API
-let video_http = "https://www.googleapis.com/youtube/v3/videos?";
+let api_key = //Your API
+let;
 let channel_http = "https://www.googleapis.com/youtube/v3/channels?";
 
-fetch(video_http + new URLSearchParams({
+fetch("https://www.googleapis.com/youtube/v3/videos?" + new URLSearchParams({
     key: api_key,
     part: 'snippet',
     chart: 'mostPopular',
